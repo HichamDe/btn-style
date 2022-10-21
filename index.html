@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    *{
+
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #eee;
+        color: #333;
+
+    }
+
+    div{
+
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: 800;
+        background-color: rgba(255, 255, 255, 0.596);
+        border-radius: 10px;
+        cursor: pointer;
+        height: 100px;
+        width: 300px;
+    }
+    div::before{
+
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        height: inherit;
+        width: 300px;
+        border-radius: 10px;
+        background: rgba(15, 124, 151, 0.226);
+
+    }
+
+    div:hover::before{
+
+        display: block;
+        animation: btn .2s ease-in-out;
+
+    }
+
+    @keyframes btn {
+        from{
+            width: 0px;
+            border-top-right-radius: 50% ;
+            border-bottom-right-radius: 50%;
+        }
+        to{
+            width: 300px;
+        }
+    }
+
+</style>
+<body>
+    
+    <div>Google STyle</div>
+
+</body>
+</html>
